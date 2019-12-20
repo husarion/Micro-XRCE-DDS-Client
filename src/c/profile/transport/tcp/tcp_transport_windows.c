@@ -2,7 +2,7 @@
 #include <uxr/client/profile/transport/tcp/tcp_transport_windows.h>
 #include "tcp_transport_internal.h"
 
-#include <uxr/client/util/time.h>
+#include <uxr/client/util/xrce_time.h>
 
 bool uxr_init_tcp_platform(struct uxrTCPPlatform* platform, const char* ip, uint16_t port)
 {

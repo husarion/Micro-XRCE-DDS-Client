@@ -13,7 +13,7 @@
 // limitations under the License.
 
 #include <uxr/client/core/session/session_info.h>
-#include <uxr/client/util/time.h>
+#include <uxr/client/util/xrce_time.h>
 #include <uxr/client/config.h>
 
 #include "../serialization/xrce_header_internal.h"

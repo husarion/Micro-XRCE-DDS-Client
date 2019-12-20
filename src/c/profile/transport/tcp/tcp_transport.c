@@ -1,5 +1,5 @@
 #include "tcp_transport_internal.h"
-#include <uxr/client/util/time.h>
+#include <uxr/client/util/xrce_time.h>
 
 #define UXR_MAX_WRITE_TCP_ATTEMPS 16
 

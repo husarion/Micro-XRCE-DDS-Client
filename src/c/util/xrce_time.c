@@ -1,10 +1,10 @@
-#include <uxr/client/util/time.h>
+#include <uxr/client/util/xrce_time.h>
 #include <time.h>
 
 #ifdef WIN32
 #include <Windows.h>
 #elif defined(PLATFORM_NAME_BAREMETAL)
-#include <baremetal/include/time.h>
+#include <baremetal/include/baremetal_time.h>
 #endif
 //==================================================================
 //                             PUBLIC
