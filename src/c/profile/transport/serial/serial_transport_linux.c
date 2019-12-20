@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_LINUX)
 #include <uxr/client/profile/transport/serial/serial_transport_linux.h>
 #include "serial_transport_internal.h"
 
@@ -62,4 +63,4 @@ size_t uxr_read_serial_data_platform(uxrSerialPlatform* platform, uint8_t* buf, 
     }
     return rv;
 }
-
+#endif /* PLATFORM_NAME_LINUX */

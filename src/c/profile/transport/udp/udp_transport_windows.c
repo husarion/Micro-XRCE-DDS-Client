@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_WINDOWS)
 #include <uxr/client/profile/transport/udp/udp_transport_windows.h>
 #include "udp_transport_internal.h"
 
@@ -79,3 +80,4 @@ size_t uxr_read_udp_data_platform(uxrUDPPlatform* platform, uint8_t* buf, size_t
     }
     return rv;
 }
+#endif /* PLATFORM_NAME_WINDOWS */

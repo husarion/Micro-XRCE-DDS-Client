@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_LINUX)
 #include <uxr/client/profile/transport/tcp/tcp_transport_linux.h>
 #include "tcp_transport_internal.h"
 
@@ -102,3 +103,5 @@ void uxr_disconnect_tcp_platform(struct uxrTCPPlatform* platform)
     close(platform->poll_fd.fd);
     platform->poll_fd.fd = -1;
 }
+
+#endif /* PLATFORM_NAME_LINUX */

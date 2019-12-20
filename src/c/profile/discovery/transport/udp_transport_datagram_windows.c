@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_WINDOWS)
 #include "udp_transport_datagram_internal.h"
 
 #include <WS2tcpip.h>
@@ -89,3 +90,4 @@ void uxr_bytes_to_ip(
     inet_ntop(AF_INET, &(addr.s_addr), ip, INET_ADDRSTRLEN);
 }
 
+#endif /* PLATFORM_NAME_WINDOWS */

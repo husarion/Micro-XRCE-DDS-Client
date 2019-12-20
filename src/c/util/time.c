@@ -3,14 +3,19 @@
 
 #ifdef WIN32
 #include <Windows.h>
+#elif defined(PLATFORM_NAME_BAREMETAL)
+#include <baremetal/include/time.h>
 #endif
-
 //==================================================================
 //                             PUBLIC
 //==================================================================
 int64_t uxr_millis(void)
 {
+#if defined(PLATFORM_NAME_BAREMETAL)
+    return baremetal_millis();
+#else
     return uxr_nanos() / 1000000;
+#endif
 }
 
 int64_t uxr_nanos(void)
@@ -28,6 +33,8 @@ int64_t uxr_nanos(void)
     uint64_t current_time = (((uint64_t) ft.dwHighDateTime) << 32) + ft.dwLowDateTime;
 
     return (current_time - epoch_time) * 100;
+#elif defined(PLATFORM_NAME_BAREMETAL)
+    return baremetal_nanos();
 #else
     struct timespec ts;
     clock_gettime(CLOCK_REALTIME, &ts);

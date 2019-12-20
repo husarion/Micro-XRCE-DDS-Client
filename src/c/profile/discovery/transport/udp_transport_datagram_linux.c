@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_LINUX)
 #include "udp_transport_datagram_internal.h"
 
 #include <arpa/inet.h>
@@ -84,3 +85,4 @@ void uxr_bytes_to_ip(
     strcpy(ip, internal_ip);
 }
 
+#endif /* PLATFORM_NAME_LINUX */

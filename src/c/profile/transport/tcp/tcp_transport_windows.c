@@ -1,3 +1,4 @@
+#if defined(PLATFORM_NAME_WINDOWS)
 #include <uxr/client/profile/transport/tcp/tcp_transport_windows.h>
 #include "tcp_transport_internal.h"
 
@@ -95,3 +96,4 @@ void uxr_disconnect_tcp_platform(struct uxrTCPPlatform* platform)
     closesocket(platform->poll_fd.fd);
     platform->poll_fd.fd = INVALID_SOCKET;
 }
+#endif /* PLATFORM_NAME_WINDOWS */
