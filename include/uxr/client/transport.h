@@ -50,7 +50,7 @@
 #elif ( defined(PLATFORM_NAME_WINDOWS) || defined(PLATFORM_NAME_NUTTX) )
 #include <uxr/client/profile/transport/serial/serial_transport_linux.h>
 #elif defined(PLATFORM_NAME_BAREMETAL)
-#include <uxr/client/profile/transport/tcp/tcp_transport_baremetal.h>
+#include <uxr/client/profile/transport/serial/serial_transport_baremetal.h>
 #endif
 #endif //PROFILE_SERIAL_TRANSPORT
 
